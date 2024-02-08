@@ -23,7 +23,7 @@ struct BarcodeScannerView: View {
                 Text("Not Yet Scanned")
                     .bold()
                     .font(.largeTitle)
-                    .foregroundColor(.green)
+                    .foregroundColor(.red)
                     .padding()
             }
             .navigationTitle("Barcode Scanner")
