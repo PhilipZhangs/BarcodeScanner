@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct ScannerView: UIViewControllerRepresentable {
+    
     func makeUIViewController(context: Context) -> some UIViewController {
         ScannerVC(ScannerDelegate: context.coordinator)
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        <#code#>
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
     }
     
     final class Coordinator: NSObject, ScannerVCDelegate {
         func didFind(barcode: String) {
-            <#code#>
+            print(barcode)
         }
     
         func didSurface(error: CameraError) {
-            <#code#>
+            print(error.rawValue)
         }
     }
 }
