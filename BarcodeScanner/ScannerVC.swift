@@ -13,10 +13,12 @@ enum CameraError {
     case invalidScannedValue
 }
 
+
 protocol ScannerVCDelegate: class {
     func didFind(barcode: String)
     func didSurface(error: CameraError)
 }
+
 
 final class ScannerVC: UIViewController {
     
@@ -31,10 +33,12 @@ final class ScannerVC: UIViewController {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCaptureSession()
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -79,17 +83,20 @@ final class ScannerVC: UIViewController {
             scannerDelegate?.didSurface(error: .invalidDeviceInput)
             return
         }
+        
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer!.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer!)
+        
         captureSession.startRunning()
     }
 }
 
+
 extension ScannerVC: AVCaptureMetadataOutputObjectsDelegate {
     
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects:
-        [AVMetadataObject], from connection: AVCaptureConnection) {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        
         guard let object = metadataObjects.first else {
             scannerDelegate?.didSurface(error: .invalidScannedValue)
             return
@@ -105,7 +112,6 @@ extension ScannerVC: AVCaptureMetadataOutputObjectsDelegate {
             return
         }
         
-        captureSession.stopRunning()
         scannerDelegate?.didFind(barcode: barcode)
     }
 }
