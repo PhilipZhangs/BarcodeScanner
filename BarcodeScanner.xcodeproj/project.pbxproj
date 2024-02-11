@@ -60,9 +60,9 @@
 				4AA1D6492B734E0A00D04801 /* BarcodeScannerApp.swift */,
 				4AA1D64B2B734E0A00D04801 /* BarcodeScannerView.swift */,
 				4AA1D6582B74BE2600D04801 /* ScannerVC.swift */,
+				4AA1D65A2B74C3C000D04801 /* ScannerView.swift */,
 				4AA1D64D2B734E1000D04801 /* Assets.xcassets */,
 				4AA1D64F2B734E1000D04801 /* Preview Content */,
-				4AA1D65A2B74C3C000D04801 /* ScannerView.swift */,
 			);
 			path = BarcodeScanner;
 			sourceTree = "<group>";
