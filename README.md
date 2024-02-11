@@ -19,10 +19,7 @@ This iOS application allows users to scan EAN8 or EAN13 barcodes using the devic
 ## Screenshots
 
 ![Screenshot 2024-02-11 at 2 06 57 PM](https://github.com/PhilipZhangs/BarcodeScanner/assets/73215906/e06ad4f8-f181-466b-8272-3e2826a63330)
-![IMG_1078](https://github.com/PhilipZhangs/BarcodeScanner/assets/73215906/968feb52-8440-4b0a-942b-110f7ea1f9ca)
-
-
-## Learning Utilization of AVCaptureSession
+![Uploading IMG_1084.PNG…]()
 
 This project provided an excellent opportunity to learn how to utilize AVCaptureSession for real-time barcode scanning. By leveraging AVCaptureSession, we were able to access the device's camera, capture video frames, and process them for barcode detection. Understanding AVCaptureSession's configuration, delegate methods, and handling captured metadata were essential for implementing the barcode scanning functionality in this app.
 
